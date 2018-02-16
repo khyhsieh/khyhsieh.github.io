@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<link rel="stylesheet" href="/css/main-php.css">
+</head>
+
+<body>
+
+<p>First five songs in my Spotify:</p>
+
+<table width="60%" align="center">
+<thead>
+    <tr>
+        <th width="20%">ID</th>
+        <th width="50%">Age</th>
+        <th width="50%">Status</th>
+    </tr>
+</thead>
+    <tbody id="songsTable" align="center"></tbody>
+</table>
+
+<script>
+var songsObj = [
+    {
+        id      : 1,
+    	songName: "New World",
+		artist  : "Krewella",
+	},
+	{
+        id      : 2,
+    	songName: "FRIENDS",
+    	artist  : "Marshmello",
+    },
+    {
+        id      : 3,
+    	songName: "The Wave",
+		artist  : "R3HAB",
+	},
+    {
+        id      : 4,
+    	songName: "Azukita",
+		artist  : "Steve Aoki",
+    },
+    {
+        id      : 5,
+    	songName: "I Can't Escape",
+		artist  : "SLANDER",
+    }
+];
+var x = '<tbody>'
+for(i = 0;i < songsObj.length; i++){
+    x+= '<tr>';
+    x+= '<td>' + songsObj[i].id + '</td>';
+    x+= '<td>' + songsObj[i].songName + '</td>';
+    x+= '<td>' + songsObj[i].artist + '</td>';
+    x+= '</tr>';
+}
+x+='</tbody>';
+document.getElementById('songsTable').innerHTML = x;
+</script>
+
+</body>
+
+</html>
