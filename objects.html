@@ -68,8 +68,8 @@ var songsObj2 = [
 	}
 ];
 
-_.merge(songsObj, songsObj2); 
-console.log(songsObj);
+Object.assign(songsObj, songsObj2); 
+//console.log(songsObj);
 
 var x = '<tbody>'
 for (i = 0; i < songsObj.length; i++){
