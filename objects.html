@@ -68,30 +68,17 @@ var songsObj2 = [
 	}
 ];
 
-var songsObjNew = Object.assign(songsObj, songsObj2); 
-//console.log(songsObj);
-
 var x = '<tbody>'
-for (i = 0; i < songsObjNew.length; i++){
+for (i = 0; i < songsObj.length; i++){
     x+= '<tr>';
-    x+= '<td>' + songsObjNew[i].id + '</td>';
-    x+= '<td>' + songsObjNew[i].songName + '</td>';
-    x+= '<td>' + songsObjNew[i].artist + '</td>';
-    x+= '<td>' + songsObjNew[i].songLength + '</td>';
+    x+= '<td>' + songsObj[i].id + '</td>';
+    x+= '<td>' + songsObj[i].songName + '</td>';
+    x+= '<td>' + songsObj[i].artist + '</td>';
+    x+= '<td>' + songsObj2[i].songLength + '</td>';
     x+= '</tr>';
 }
 x+='</tbody>';
 document.getElementById('songsTable').innerHTML = x;
-
-///var y = '<tbody>'
-//for (i = 0; i < songsObj2.length; i++){
-//    y+= '<tr>';
-//    y+= '<td>' + songsObj2[i].songLength + '</td>';
-//    y+= '</tr>';
-//}
-//y+='</tbody>';
-//document.getElementById('songsTable').innerHTML = y;
-
 
 </script>
 
