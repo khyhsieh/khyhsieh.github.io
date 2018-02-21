@@ -68,16 +68,16 @@ var songsObj2 = [
 	}
 ];
 
-Object.assign(songsObj, songsObj2); 
+var songsObjNew = Object.assign(songsObj, songsObj2); 
 //console.log(songsObj);
 
 var x = '<tbody>'
-for (i = 0; i < songsObj.length; i++){
+for (i = 0; i < songsObjNew.length; i++){
     x+= '<tr>';
-    x+= '<td>' + songsObj[i].id + '</td>';
-    x+= '<td>' + songsObj[i].songName + '</td>';
-    x+= '<td>' + songsObj[i].artist + '</td>';
-    x+= '<td>' + songsObj[i].songLength + '</td>';
+    x+= '<td>' + songsObjNew[i].id + '</td>';
+    x+= '<td>' + songsObjNew[i].songName + '</td>';
+    x+= '<td>' + songsObjNew[i].artist + '</td>';
+    x+= '<td>' + songsObjNew[i].songLength + '</td>';
     x+= '</tr>';
 }
 x+='</tbody>';
