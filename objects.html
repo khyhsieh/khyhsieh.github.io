@@ -15,6 +15,7 @@
         <th width="10%">ID</th>
         <th width="20%">Song Name</th>
         <th width="20%">Artist</th>
+        <th width="20%">Song Length (minutes)</th>        
     </tr>
 </thead>
     <tbody id="songsTable" align="center"></tbody>
@@ -49,7 +50,7 @@ var songsObj = [
     }
 ];
 var x = '<tbody>'
-for(i = 0;i < songsObj.length; i++){
+for (i = 0; i < songsObj.length; i++){
     x+= '<tr>';
     x+= '<td>' + songsObj[i].id + '</td>';
     x+= '<td>' + songsObj[i].songName + '</td>';
@@ -58,6 +59,36 @@ for(i = 0;i < songsObj.length; i++){
 }
 x+='</tbody>';
 document.getElementById('songsTable').innerHTML = x;
+
+var songsObj2 = [
+	{
+		songLength: 162
+	},
+	{
+		songLength: 203
+	},
+	{
+		songLength: 158
+	},
+	{
+		songLength: 226
+	},
+	{
+		songLength: 230
+	}
+];
+Object.assign(songsObj, songsObj2); 
+console.log(songsObj)
+
+var y = '<tbody>'
+for (i = 0; i < songsObj2.length; i++){
+    y+= '<tr>';
+    y+= '<td>' + songsObj2[i].songLength + '</td>';
+    y+= '</tr>';
+}
+y+='</tbody>';
+document.getElementById('songsTable').innerHTML = y;
+
 </script>
 
 </body>
