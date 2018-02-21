@@ -21,6 +21,19 @@
     <tbody id="songsTable" align="center"></tbody>
 </table>
 
+<p>Summary:</p>
+
+<table width="60%" border="thick solid">
+<thead>
+    <tr>
+        <th>Songs</th>
+        <th>Artists</th>
+        <th>Total Song Length (minutes)</th>        
+    </tr>
+</thead>
+    <tbody id="summaryTable" align="center"></tbody>
+</table>
+
 <script>
 var songsObj = [
     {
@@ -68,7 +81,7 @@ var songsObj2 = [
 	}
 ];
 
-var x = '<tbody>'
+var x = '<tbody>';
 for (i = 0; i < songsObj.length; i++){
     x+= '<tr>';
     x+= '<td>' + songsObj[i].id + '</td>';
@@ -76,9 +89,27 @@ for (i = 0; i < songsObj.length; i++){
     x+= '<td>' + songsObj[i].artist + '</td>';
     x+= '<td>' + songsObj2[i].songLength + '</td>';
     x+= '</tr>';
-}
+};
 x+='</tbody>';
 document.getElementById('songsTable').innerHTML = x;
+
+
+var sum = ''
+for (i = 0; i < songsObj2.length; i++){
+	sum += songsObj2.songLength
+	return sum
+};
+
+var y = '<tbody>';
+for (i = 0; i < 3; i++){
+    y+= '<tr>';
+    y+= '<td>' + 5 + '</td>';
+    y+= '<td>' + 5 + '</td>';
+    y+= '<td>' + sum + '</td>';
+    y+= '</tr>';
+};
+y+='</tbody>';
+document.getElementById('summaryTable').innerHTML = y;
 
 </script>
 
